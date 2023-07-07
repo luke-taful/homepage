@@ -7,9 +7,12 @@ function addItem(newText){
     newListItem.setAttribute('id', 'item '+x);
     newListItem.setAttribute('onclick', 'removeItem(this.id)');
 
-    newText = document.getElementById("itemText").value;
+    it = document.getElementById("itemText");
+    newText = it.value;
     newListItem.textContent = newText;
     ul.appendChild(newListItem);
+
+    it.value = null;
     x+=1;
 }
 
